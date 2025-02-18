@@ -1,0 +1,12 @@
+...
+name = input("insert your name: ")
+print(f"Hello {name}, How are you?")
+
+print(name.upper())
+print(name.lower())
+
+message = ("the informatica is great!")
+print(f"{name} once said: {message} ")
+
+persona_famosa = ("Albert Einstein")
+print(f"{persona_famosa} ha detto: {message} ")

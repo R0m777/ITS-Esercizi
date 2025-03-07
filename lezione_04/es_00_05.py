@@ -6,13 +6,14 @@ Using add_one(), fill new_list with integers from the argument list incremented
 by 1.
 Print new_list.'''
 
-def add_one(a):
+def add_one(a:int):
     return a+1
-
-def add_one_to_list(number_list):
-    
-for n in new_list:
-    new_list.append()
-
+numbers = [1,2,4,5,6]
+result = add_one(numbers)
+new_list:list = []
+def add_one_to_list(b:list) -> list:
+    for n in numbers:
+        new_list.append(add_one(numbers))
+    return new_list
 
 

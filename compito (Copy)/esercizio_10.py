@@ -36,8 +36,10 @@ if len(numeri) > 0:     #verifica se ci sono valori n nella lista numeri
             frequenze[numero] += 1
         else:
             frequenze[numero] = 1
-    
-    media_dispari = somma_dispari / conta_dispari if conta_dispari > 0 else 0
+    if conta_dispari > 0:
+       media_dispari = somma_dispari / conta_dispari 
+    else: 
+        0
     massima_frequenza = max(frequenze.values())  #La funzione max viene utilizzata per trovare il valore massimo di un oggetto iterabile.
     numeri_piu_frequenti:list = []  #lista per slvare i valori piu frequenti
     

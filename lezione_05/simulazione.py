@@ -1,5 +1,5 @@
 import random
-
+import time
 def posizioni(posizione_tartaruga:int, posizione_lepre:int):
     posizione = ["_"] * 70
     if posizione_tartaruga == posizione_lepre:
@@ -68,5 +68,6 @@ def gara():
             print("HARE WINS || YUCH!!!")
             return
         
+        time.sleep(0.3)
 gara()
 

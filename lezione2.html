@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Elenchi</h1>
+    <u1>
+        <li> lunedi </li>
+        <li> martedì </li>
+        <li> mercoledi </li>
+        <li> giovedì </li>
+    </u1>
+
+    <!--Tabelle ...
+        allinizio si usavano solo le tabelle
+        dopo le 2000 è nato lo smartphon le tabelle non si utilizzano più
+        ed sono state sostituite da i ..div
+        
+        div utilizzano la stessa logica delle tabelle-->
+
+        <table border="1"> 
+            <tr>
+                <td>A1</td>
+                <td><h1>BANNER</h1></td>
+                <td>C1</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <table border="1" width="100%">
+                        <tr>
+                            <td>Totolo</td>
+                            <td align="right"> descrizione</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>C2</td>
+            </tr>
+        </table>
+
+        <!--Form rendere la nostra pagina interattiva-->
+        <!--nel tag form :
+                action ... destinatario
+                method ... get / post
+                name ... del form
+                
+                invio i dati :
+                     chiaro (get)    dati non sensibili
+                     nascosti (post)-->
+
+        <form action="https://www.google.it" method="get">
+            <input type="text" name="nome">
+            <input type="file" name="CV">
+            <input type="checkbox" name="privacy">
+            <input type="radio" name="sesso">
+            <select>
+                <option>Gennaio</option>
+                <option>Febraio</option>
+                <option>Marzo</option>
+            </select>
+            <textarea></textarea>
+            <!-- Invia il form ... tutti i valori e li spedisce al destinatario-->
+            <input type="submit">
+        </form>
+</body>
+</html>

@@ -68,6 +68,6 @@ def gara():
             print("HARE WINS || YUCH!!!")
             return
         
-        time.sleep(0.3)
+        time.sleep(0.2)
 gara()
 

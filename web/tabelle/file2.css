@@ -1,0 +1,24 @@
+.top-image {
+    width: 100%;
+}
+
+.center-text {
+    text-align: center;
+    }
+
+.image-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.left-images {
+    width: 30%;
+}
+
+.right-images img {
+    display: block;
+    margin-bottom: 5px;
+    width: 150px;
+    height: 195px;
+}

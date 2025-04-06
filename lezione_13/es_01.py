@@ -22,4 +22,4 @@ def recursivePower(n1:int,n2:int) -> int:
         return int(n1 * recursivePower(n1, n2-1))
 
 print(recursivePower(3,4))
-print(recursivePower(4,3))
+print(recursivePower(5,5))

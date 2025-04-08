@@ -12,14 +12,17 @@ Utilizzare, poi, la funzione per calcolare:
     52, ovvero 5 elevato alla potenza di 2'''
 
 def recursivePower(n1:int,n2:int) -> int:
-    if n1 <= 0 or n2 <= 0:
+    if n1 == 0:
         return 0
-    elif n1 == 1:
+    elif n2 == 0:
         return 1
-    elif n2 == 1:
-        return n1
     else:
         return int(n1 * recursivePower(n1, n2-1))
 
 print(recursivePower(3,4))
-print(recursivePower(5,5))
+print("-"*30)
+print(recursivePower(5,1))
+print("-"*30)
+print(recursivePower(4,0))
+print("-"*30)
+print(recursivePower(1,1))

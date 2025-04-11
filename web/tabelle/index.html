@@ -3,40 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabelle</title>
-    <link rel="stylesheet" href="file2.css">
-</head>
+    <title>esercizio tabelle completo</title>
+    <link rel="stylesheet" href="style.css">
+    <style class="fixed-image">
+        body {
+            background-color:rgb(212, 255, 147);
+        }
+       
+    </style>
+</head >
+
 <body>
-    <img src="top.jpg" width="100%">
-    <p align="center">| HOME | LA NOSTRA AZIENDA | I PRODOTTI | I SERVIZI | CARELLO | CONTATTI |</p>
-    <div class="image-container">
-        <div class="left-images">
-            <img src="registrati-ora.jpg">
-            <img src="login.jpg">
-            <img src="catalogo.jpg">
-        </div>
-        <div class="right-images">
-            <table>
-                <tr>
-                    <h1 style="font-size: medium;">L'attività della Edit service offre i seguenti servizi :</h1> 
-                </tr>
+    
+    <table class="tabella1" align="center">
+        <div align="center" >
+            <!--Immagine TOP-->
+            <img width="65%" src="top.jpg" alt="Descrizione immagine">
+          </div >
+        <tr>
+            <td align="center" colspan="2">
+                <!-- Descrizione dell'immagine -->
+                
+            </td>
+        </tr>
+
+        <!-- LINK DI NAVIGAZIONE -->
+        <tr class="link1" align="center">
+            <td width="85%" height="20" style="padding: 10px;" colspan="2">
+                <!-- Descrizione sotto-->
+                <b>HOME | LA NOSTRA AZIENDA | I PRODOTTI | I SERVIZI | I CONTATTI |</b>
+            </td>
+        </tr>
+
+        <tr>
+            <!--  prima colonna di sinistra -->
+            <td class="colonna-sinistra">
+                <table >
+                    <tr>
+                    <td><img src="registrati-ora.jpg" alt=""></td>
+                    </tr>
+                    <tr>
+                    <td><img src="login.jpg" alt=""></td>
+                    </tr>
+                    <tr>
+                    <td><img src="catalogo.jpg" alt=""></td>
+                    </tr>
+                    
+                </table>
+                
+            </td>
+
+            <!-- Colonna destra -->
+             
+            <td class="colonna-destra">
+                
+                    <table width="100%">
+                        <tr>
+                        <td>
+                        <p ><b>L'attività della Edit Service offre i seguenti servizi:</b></p>
+                        <p>Visita periodica al vostro studio consegnandovi direttamente in conto visione le ultime novità <br>
+                            editoriali senza obbligo di acquisto. La possibilità di richiedere sempre in visione tutti i libri <br>
+                            che volete o che troverete elencati nel sito. Ricevere le banche Dati di vostra utilità in demo. <br> 
+                            Ricevere periodicamente le news via E-mail e il catalogo di tutte le novità facendone semplicemente
+                            richiesta</p>
                 <tr>
                     <td>
-                         
-                    </td>
-                </tr>
-                <tr>
-                    <td style="font-size: small;">visita periodica al vostro studio consegnandovi direttamente in conto visione le ultime novità editoriali senza obbligo di acquisto. La possibilità di richiedere sempre in visione tutti i libri che volete o che troverete elencati net sito. Ricevere le Banche dati di vostra utilità in demo.
-                        Ricevere periodicamente le news via E-mail e il catalogo di tutte le novità facendone semplicemente richiesta.</td>
-               
-                </tr>
-            </table>
-            
-            <img src="libro1.jpg" style="margin-top: 20px;">
-            <img src="divisore.jpg" style="width: 500px;height: 5px;;">
-            <img src="libro2.jpg">
-            <img src="divisore.jpg" style="width: 500px; height: 5px;">
-            <img src="libro3.jpg">
-        </div>
-    </div>
+                    <table width="100%"  >
+                            <!-- Riga 2 -->
+                                <tr>
+                                    <td style="width: 5%;" colspan="1"><img src="libro1.jpg" alt=""> </td>
+                                    <td width="60%">
+                                        <table class="table2" width="100%" >
+                                        <tr><td style="background-color:#ece8e8;"><b>Le frodi carosello</b></td></tr>
+                                        <tr><td style="background-color:#ece8e8;">Categoria : Fiscale </td></tr>
+                                        <tr><td style="background-color: #ece8e8;">Editore : MAGGIOLI </td></tr>
+                                        <tr><td style="background-color: #ece8e8;">Codice : 9788891619204</td></tr>
+                                        <tr><td style="background-color:#ece8e8;">Prezzo : 22,00 </td></tr>
+                                        <tr><td style="background-color:#ece8e8; color: rgb(37, 211, 37)">***Articolo Disponibile***</td></tr>  
+                                        <tr><td style="background-color:#ece8e8;" align="right"><b><i>....Link per maggiori informazioni</i></b></td></tr>
+                                        </table>
+                                        </td>
+                                                </tr>
+                                <tr>
+                                <td  style="text-align: left;" colspan="2">
+                                        <!-- Descrizione del divisore -->
+                                        <img src="divisore.jpg" alt="">
+                                </td>
+                                </tr>
+
+                                <!-- Riga 3 -->
+                                <tr>
+                                    <td><img src="libro2.jpg" alt=""></td>
+                                    <td>
+                                        <table width="100%" >
+                                            <tr><td style="background-color:#ece8e8;"><b>La cartella di pagamento</b></td></tr>
+                                            <tr><td style="background-color:#ece8e8;">Categoria : Fiscale </td></tr>
+                                            <tr><td style="background-color: #ece8e8;">Editore : MAGGIOLI </td></tr>
+                                            <tr><td style="background-color:#ece8e8;">Codice : 9788891621115 </td></tr>
+                                            <tr><td style="background-color:#ece8e8;">Prezzo :54,00 </td></tr>
+                                            <tr><td style="background-color: #ece8e8; color: rgb(37, 214, 37);">***Articolo Disponibile*** </td></tr>
+                                            <tr><td style="background-color:#ece8e8;" align="right"><b><i>...Link per maggiori informazioni</i></b></td></tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;" colspan="2">
+                                        <!-- Descrizione del divisore -->
+                                        <img src="divisore.jpg" alt="">
+                                    </td>
+                                </tr>
+
+                                <!-- Riga 4 -->
+                                <tr>
+                                    <td><img src="libro3.jpg" alt=""> </td>
+                                    <td>
+                                        <table width="100%">
+                                            <tr><td style="background-color:#ece8e8;"><b>Azienda agricola e fisco</b></td></tr>
+                                            <tr><td style="background-color:#ece8e8;">Categoria : Fiscale </td></tr>
+                                            <tr><td style="background-color:#ece8e8;">Editore : MAGGIOLI </td></tr>
+                                            <tr><td style="background-color:#ece8e8;">Codice : 9788891619815 </td></tr>
+                                            <tr><td style="background-color:#ece8e8;">Prezzo : 54,00 </td></tr>
+                                            <tr><td style="background-color:#ece8e8;color: rgb(37, 214, 37);">***Articolo Disponibile***</td></tr>
+                                            <tr><td style="background-color:#ece8e8;" align="right"><b><i>...Link per maggiori informazioni</i></b></td></tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;" colspan="2">
+                                        <!-- Descrizione del divisore -->
+                                        <img src="divisore.jpg" alt="">
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- Riempitivo per altezza -->
+        <tr>
+            <td colspan="2" class="filler">&nbsp;</td>
+        </tr>
+    </table>
 </body>
+</html>
+
+    
+</body>
+</html>

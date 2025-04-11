@@ -1,0 +1,30 @@
+.fixed-image {
+    display: block;
+    margin-left: 0;
+}
+.tabella1{
+    width: 65%;
+    background-color: white;
+    display: block;
+}
+
+
+
+
+.link1{ 
+    background-color: lightgray;
+    position: relative;top: -10px;
+    }
+
+.colonna-sinistra{
+    width: 10%;
+    vertical-align: top;
+    text-align: left;
+}
+
+.colonna-destra{
+    width: 67%;
+    vertical-align: top;
+    text-align: justify;
+    display: inline-block;
+}

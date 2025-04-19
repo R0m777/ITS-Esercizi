@@ -5,22 +5,27 @@ and a method called open_restaurant() that prints a message indicating that the 
 
 
 class Restaurant:
-    def __init__(self, restaurant_name:str, restaurant_type:str, restaurant_statue:str):
+    def __init__(self, restaurant_name:str, cuisine_type:str):
         self.restaurant_name = restaurant_name
-        self.restaurant_type = restaurant_type
-        self.restaurant_statue = restaurant_statue
+        self.cuisine_type = cuisine_type
 
-    
-    def describe_restaurant(self):
-            print(f"il nome del ristorante è: {self.restaurant_name}\ndi tipo {self.restaurant_type}")
-    def open_restaurant(self):
-            print(f"il ristorante è: {self.restaurant_statue}")
-if __name__ == "__main__":
-   nome = Restaurant("Pappay","Cinese","aperto")
-   nome.describe_restaurant()
-   statue = Restaurant("papay", "cinese", "Aperto")
-   statue.open_restaurant()
+    def describe_restaurant(self)->None:
+        print(f"Restaurant Name: {self.restaurant_name}")
+        print(f"Cuisine Type: {self.cuisine_type}")
 
+    def open_restaurant(self)->None:
+        print(f"{self.restaurant_name} is now open!")
+
+# Create an instance of Restaurant
+restaurant = Restaurant("Cascio & Pepe", "Italian")
+
+# Print the two attributes individually
+print(restaurant.restaurant_name)
+print(restaurant.cuisine_type)
+
+# Call both methods
+restaurant.describe_restaurant()
+restaurant.open_restaurant()
 
 
 

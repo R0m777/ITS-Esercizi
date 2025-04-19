@@ -8,26 +8,40 @@ Call this method with a new number and print the value again.
 Call this method with any number you like that could represent how many customers were served in, say, a day of business. '''
 
 class Restaurant:
-    def __init__(self, restaurant_name:str, restaurant_type:str, restaurant_statue:str, costomers:int):
+    def __init__(self, restaurant_name:str, cuisine_type:str):
         self.restaurant_name = restaurant_name
-        self.restaurant_type = restaurant_type
-        self.restaurant_statue = restaurant_statue
-        self.costomers = costomers
-        
+        self.cuisine_type = cuisine_type
+        self.number_served = 0 
 
-    
-    def describe_restaurant(self) -> None:
-            print(f"il nome del ristorante è: {self.restaurant_name}\ndi tipo {self.restaurant_type}\nè {self.restaurant_statue}\nHa servito: {self.costomers}")
-        
-    def setNumber(self,costomers) -> None:
-         self.costomers = costomers
+    def describe_restaurant(self)->None:
+        print(f"Restaurant Name: {self.restaurant_name}")
+        print(f"Cuisine Type: {self.cuisine_type}")
 
-    def __call__(self) -> int:
-         return self.costomers
-    
-pd:Restaurant = Restaurant("Pizzeria","Italiano","Aperto!!", 7)
-pd.describe_restaurant()
+    def open_restaurant(self)->None:
+        print(f"{self.restaurant_name} is now open!")
 
+    def set_number_served(self, number)->int:
+        self.number_served = number
+
+    def increment_number_served(self, increment)->int:
+        self.number_served += increment
+
+
+restaurant = Restaurant("Pappay", "Italian")
+
+
+print(f"Number served: {restaurant.number_served}")
+
+
+restaurant.number_served = 25
+print(f"Number served after update: {restaurant.number_served}")
+
+restaurant.set_number_served(50)
+print(f"Number served after set_number_served: {restaurant.number_served}")
+
+
+restaurant.increment_number_served(30)
+print(f"Number served after increment_number_served: {restaurant.number_served}")
          
     
           

@@ -5,29 +5,38 @@ Create two attributes called first_name and last_name, and then create several o
 Create several instances representing different users, and call both methods for each user.'''
 
 class User:
-    def __init__(self):
-        self.name:str = ""
-        self.last_name:str = ""
-
-    def describeUser(self) -> None:
-        print(f"User name: {self.name}\nLast name: {self.last_name}")
-
-    def setUserInfo(self,name,last_name) -> None:
-        self.name = name
+    def __init__(self, first_name:str, last_name:str, age:int, location:str, occupation:str):
+        if not (17<age<80):
+            raise ValueError("Age must be between 18 and 79")
+        self.first_name = first_name
         self.last_name = last_name
+        self.age = age
+        self.location = location
+        self.occupation = occupation
 
-    def __call__(self) -> str:
-        return f"User name: {self.name}\nLast name: {self.last_name}"
-    
+    def describe_user(self)-> None:
+        print(f"\nUser Profile:")
+        print(f"Name: {self.first_name} {self.last_name}")
+        print(f"Age: {self.age}")
+        print(f"Location: {self.location}")
+        print(f"Occupation: {self.occupation}")
 
-    
+    def greet_user(self)-> None:
+        print(f"Hello, {self.first_name} {self.last_name}! Welcome back!")
 
-pd:User = User()
-pd.setUserInfo("Philip", "Daoud")
-pd.describeUser()
-print("-"*30)
-user2:User = User()
-user2.setUserInfo("Marco", "Gasp")
-user2.describeUser()
+# User
+user1 = User("Paperino", "Bianco", 30, "Milano", "Pagliaccio")
+user2 = User("Pino", "Nero", 45, "Napoli", "Magazziniere")
+user3 = User("Jennifer", "Lopez", 60, "Los Angeles", "Cantante")
+
+# Calling methods
+user1.describe_user()
+user1.greet_user()
+
+user2.describe_user()
+user2.greet_user()
+
+user3.describe_user()
+user3.greet_user()
 
         

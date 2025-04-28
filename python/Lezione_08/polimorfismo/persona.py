@@ -52,3 +52,6 @@ class Persona:
     def getAge(self) -> int:
         return self.age
     
+    # metodo speak() per la calsse persona che consente di simulare un slauto
+    def speak(self) -> None:
+        print(f"\nHello! my naame is {self.getName()}\n")

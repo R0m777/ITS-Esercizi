@@ -1,4 +1,4 @@
-from persona import Persona
+from Lezione_08.morfismo.persona import Persona
 
 
 class Studente(Persona):

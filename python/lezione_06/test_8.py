@@ -3,8 +3,6 @@
 
 def count_isolated(lista:list[int]) -> int:
     for i in range(len(lista)):
-        
-    
+        print(count_isolated([1, 2, 2, 3, 3, 3, 4]))
 
-print(count_isolated([1, 2, 2, 3, 3, 3, 4]))
 print(count_isolated([1, 2, 3, 4, 5]))

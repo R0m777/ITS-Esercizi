@@ -1,5 +1,5 @@
-from persona import Persona
-from studente import Studente
+from Lezione_08.morfismo.persona import Persona
+from Lezione_08.morfismo.studente import Studente
 
 #creare un ogetto p di classe Persona
 p:Persona = Persona("Philip", "Daoud", 26)

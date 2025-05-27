@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="risultato"></div>
+    <div id="saluto"></div>
+
+    <script>
+        // esempio finzione che non torna nulla
+        function somma(num1, num2){
+            document.getElementById("risultato").innerHTML = "la somma è "+ (num1 + num2);
+        }
+
+        somma(2,3)
+
+        // esempio funzione che Rorna un valore
+        function benvenuto(nome = "guest"){
+            return "Welcome " + nome;
+        }
+
+        let name = prompt("inserisci il tuo nome");
+        let msg = benvenuto(name);
+        document.getElementById("saluto").innerHTML = "<i>" +msg + "<i>";
+
+    </script>
+</body>
+</html>

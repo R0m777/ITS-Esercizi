@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <title>Giorno della settimana</title>
+</head>
+<body>
+    <h2>Inserisci un numero da 1 a 7</h2>
+    <input id="numero"/>
+    <button onclick="verificaGiorno()">Verifica</button>
+    <div id="output"></div>
+
+    <script>
+        function isValidDay(num) {
+            return num >= 1 && num <= 7;
+        }
+
+        function verificaGiorno() {
+            let giorni = {
+                1: "Lunedì",
+                2: "Martedì",
+                3: "Mercoledì",
+                4: "Giovedì",
+                5: "Venerdì",
+                6: "Sabato",
+                7: "Domenica"
+            };
+
+            let input = document.getElementById("numero").value;
+            let num = input;
+            let output = document.getElementById("output");
+
+            if (isValidDay(num)) {
+                output.textContent = giorni[num];
+            } else {
+                output.textContent = "Peccato, non posso indovinare il giorno.";
+            }
+        }
+    </script>
+</body>
+</html>

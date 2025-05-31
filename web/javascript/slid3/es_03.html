@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio 3.3</title>
+</head>
+<body>
+    <script>
+        var inputSecondi = 12560; 
+        var ore = parseInt(inputSecondi / 3600);
+        var secondiRimanenti = inputSecondi % 3600;
+        var minuti = parseInt(secondiRimanenti / 60);
+        var secondiFinali = secondiRimanenti % 60;
+
+        var outputString = ore + " ore, " + minuti + " minuti e " + secondiFinali + " secondi";
+
+        document.write("<p>Input: " + inputSecondi + " secondi</p>");
+        document.write("<p>Output: " + outputString + "</p>");
+
+        console.log("Input: " + inputSecondi + " secondi");
+        console.log("Output: " + outputString);
+    </script>
+</body>
+</html>

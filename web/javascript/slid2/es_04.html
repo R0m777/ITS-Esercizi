@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio 1.4</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var miaStringa = "50";
+        var outputDiv = document.getElementById("output");
+
+        var riga1 = "Valore originale: " + miaStringa; 
+        console.log(riga1);
+        outputDiv.innerHTML += riga1;
+
+        
+        var esitoIsNaN = !isNaN(miaStringa);
+        var riga2 = "Valore " + miaStringa + "' è considerato numerico da !isNaN(): " + esitoIsNaN; 
+        console.log(riga2);
+        outputDiv.innerHTML += riga2;
+
+        
+        var mioNumero = parseInt(miaStringa);
+        
+
+        var riga3 = "Valore convertito: " + mioNumero; 
+        console.log(riga3);
+        outputDiv.innerHTML += riga3;
+    </script>
+</body>
+</html>

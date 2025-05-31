@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio 4.7 - Numero Più Grande</title>
+</head>
+<body>
+    <script>
+        var numeri = [97, 13, 69, 23, 98, 5, 34]; 
+        var numeroPiuGrande;
+
+        document.write("<p>I numeri nell'array sono: ");
+        for (var k = 0; k < numeri.length; k = k + 1) {
+            document.write(numeri[k]);
+            if (k < numeri.length - 1) {
+                document.write(", ");
+            }
+        }
+        document.write("</p>");
+        console.log("I numeri nell'array sono:", numeri);
+
+        if (numeri.length > 0) {
+            numeroPiuGrande = numeri[0];
+
+            for (var i = 1; i < numeri.length; i = i + 1) {
+                if (numeri[i] > numeroPiuGrande) { 
+                    numeroPiuGrande = numeri[i];
+                }
+            }
+            document.write("<p>Il numero più grande nell'array è: " + numeroPiuGrande + "</p>");
+            console.log("Il numero più grande nell'array è: " + numeroPiuGrande);
+        } else {
+            document.write("<p>L'array è vuoto, non c'è un numero più grande.</p>");
+            console.log("L'array è vuoto.");
+        }
+    </script>
+</body>
+</html>

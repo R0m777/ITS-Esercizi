@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Javascript : codice in modo sincrono ... procedurale
+        let a = () => {
+            console.log("Sono A: benvenuto");
+        }
+        let b = () => {
+            console.log("Sono B");
+            
+            let x = new Promise( (res,rej) => {
+                setTimeout( () => {
+
+                    res("Sto recuperando gli utenti dal database")
+                },2000);
+            
+            })
+        return x;
+        }
+        let c = () => {
+            console.log("Sono C: calcolo il codice fiscale");
+        }
+        let d = () => {
+            console.log("Sono D: calcolo la busta paga");
+        }
+
+        let calcolo = () => {
+            a();
+            b().then( (risultato) => {
+                console.log(risultato);
+                c();
+                d();
+            }).catch();
+        }
+
+        calcolo ();
+        
+
+        // Js è un linguagio furbo...
+        // Js ... sfrutta librerie... funzioni del browser (non sono sue)
+        // JS è un linguagio con 2 ambienti di esecuzione (JS e browser)
+        // asincrono ... eseguito in un altro ambiente
+
+        // setTimeout() funzione del browser
+
+        console.log("Fine");
+        // A - B - C - D - Fine - Utente
+        // le funzioni asincrone vengono esegutite sempre per ultimo
+    </script>
+</head>
+<body>
+    <h1>Web 2</h1>
+</body>
+</html>

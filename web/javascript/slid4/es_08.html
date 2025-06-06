@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio 4.8</title>
+</head>
+<body>
+    <script>
+        var numeri = [2, 7, 13, 24, 31, 40, 55, 68, 77, 90];
+        var Pari = 0;    
+        var Dispari = 0;
+
+        document.write("<p>I numeri nell'array sono: ");
+        for (var k = 0; k < numeri.length; k = k + 1) {
+            document.write(numeri[k]);
+            if (k < numeri.length - 1) {
+                document.write(", ");
+            }
+        }
+        document.write("</p>");
+        console.log("I numeri nell'array sono:", numeri);
+
+        for (var i = 0; i < numeri.length; i = i + 1) {
+            var numero = numeri[i];
+
+            if (numero % 2 === 0) {
+                Pari = Pari + 1; 
+            } else {
+                Dispari = Dispari + 1;
+            }
+        }
+
+        document.write("<p>Nell'array ci sono " + Pari + " numeri pari.</p>");
+        console.log("Nell'array ci sono " + Pari + " numeri pari.");
+
+        document.write("<p>Nell'array ci sono " + Dispari + " numeri dispari.</p>");
+        console.log("Nell'array ci sono " + Dispari + " numeri dispari.");
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio 1.5</title>
+</head>
+<body>
+    <h2>Stringa Originale:</h2>
+    <div id="stringaOriginale"></div>
+    <h2>Giorni uno sotto l'altro:</h2>
+    <div id="giorniFormattati"></div>
+
+    <script>
+        var giorniSettimanaStringa = "Lunedi,Martedi,Mercoledi,Giovedi,Venerdi,Sabato,Domenica";
+        document.getElementById("stringaOriginale").textContent = giorniSettimanaStringa;
+        console.log("Stringa originale: " + giorniSettimanaStringa);
+
+        
+        var giorniPerConsole = giorniSettimanaStringa.replace("\n");
+        console.log("\nGiorni uno sotto l'altro (console):");
+        console.log(giorniPerConsole);
+
+        var giorniPerHTML = giorniSettimanaStringa.replace(/,/g, "<br>");
+        document.getElementById("giorniFormattati").innerHTML = giorniPerHTML;
+    </script>
+</body>
+</html>

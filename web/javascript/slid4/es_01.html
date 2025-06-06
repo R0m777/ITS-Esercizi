@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Esercizio 4.1</title>
+</head>
+<body>
+    <script>
+        var numeroScelto = 7;
+
+        document.write("<h2>Tabellina con ciclo 'for':</h2>");
+        console.log("Tabellina del " + numeroScelto + " (con ciclo 'for'):");
+
+        for (var i = 1; i <= 10; i = i + 1) { 
+            var risultato = numeroScelto * i;
+            document.write(numeroScelto + " x " + i + " = " + risultato + "<br>"); 
+            console.log(numeroScelto + " x " + i + " = " + risultato); 
+        }
+
+        
+        document.write("<h2>Tabellina con ciclo 'while':</h2>");
+        console.log("Tabellina del " + numeroScelto + " (con ciclo 'while'):");
+
+        var j = 1; 
+        while (j <= 10) { 
+            var risultato = numeroScelto * j; 
+            document.write(numeroScelto + " x " + j + " = " + risultato + "<br>"); 
+            console.log(numeroScelto + " x " + j + " = " + risultato); 
+            j = j + 1; 
+        }
+    </script>
+</body>
+</html>

@@ -88,7 +88,7 @@ class VideoRentalStore:
             if movie.is_rented:
                 rented_movies.append(movie)
         return rented_movies
-\
+
 
 
 

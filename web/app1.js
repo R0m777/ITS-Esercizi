@@ -1,4 +1,4 @@
-import * as util from "./util.js"
+
 
 console.log("Funzia")
 
@@ -56,3 +56,4 @@ const mario=new persona("Mario","Rossi");
 mario.telefono="1234";
 
 console.log(roberto,mario);
+

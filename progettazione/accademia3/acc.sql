@@ -7,7 +7,7 @@ create type LavoroProgetto as
 enum ('Ricerca e Sviluppo','Dimostrazione','Management','Altro');
 
 create type LavoroNonProgettuale as
-enum ('Didattica','Ricerca','Missione','Incontro Dipartimentale','Incontro Academico','Altro');
+enum ('Didattica','Ricerca','Missione','Incontro Dipartimentale','Incontro Accademico','Altro');
 
 create type CausaAssenza as
 enum ('Chiusura Universitaria','Maternita','Malattia');

@@ -3,3 +3,4 @@ Totale = 0
 Totale = Totale + ITS_menu["pizza"]
 Totale = Totale + ITS_menu["Cotoletta"]
 print(f"il tuo totale è: {Totale:.2f}")   
+

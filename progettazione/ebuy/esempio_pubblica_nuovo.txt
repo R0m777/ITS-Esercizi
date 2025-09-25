@@ -1,0 +1,33 @@
+tabella Utente
+username
+u1
+u2
+
+tabella privato
+
+utente
+u1
+
+tabella venditoreprof
+utente
+u2
+u3
+
+
+
+tabella postoggetto
+
+id (PK, K1) 		pubblica (K1)
+1 			      		u1
+2 			      		u2
+
+
+tabella postoggettonuovo
+
+postoggetto 	pubblica_nuovo 		annigaranzia
+2 						u2			3
+
+tabella postoggettousato
+
+postoggetto   condizioni   annigaranzia
+1  				Buono 			0

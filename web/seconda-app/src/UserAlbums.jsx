@@ -6,16 +6,16 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 const urlUsers = "https://jsonplaceholder.typicode.com/users";
-const urlAlbums="https://jsonplaceholder.typicode.com/albums";
+const urlAlbums = "https://jsonplaceholder.typicode.com/albums";
 //const urlPhotos="https://jsonplaceholder.typicode.com/photos";
 
 const UserAlbums = () => {
   const [users, setUsers] = useState([]);
   const [userSelected, setUserSelected] = useState(0);
 
-  const [albums,setAlbums]=useState([]);
-  const [albumSelected,setAlbumSelected]=useState(0)
-//useState Photos
+  const [albums, setAlbums] = useState([]);
+  const [albumSelected, setAlbumSelected] = useState(0)
+  //useState Photos
 
 
 
@@ -29,19 +29,19 @@ const UserAlbums = () => {
     }
   };
 
-  const getAlbums=async ()=>{
-    try{
-      const url=  urlAlbums+"?userId="+userSelected ;
+  const getAlbums = async () => {
+    try {
+      const url = urlAlbums + "?userId=" + userSelected;
       const response = await fetch(url);
       const result = await response.json();
       setAlbums(result);
-    }catch(err){
+    } catch (err) {
       console.log(err)
     }
   }
   useEffect(() => {
     getUsers();
-   
+
 
     /*fetch(urlUsers)
         .then(res=>res.json())
@@ -49,15 +49,15 @@ const UserAlbums = () => {
         .catch(err=>console.log(err))*/
   }, []);
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log("Carico albums")
 
-    if(userSelected){
-        getAlbums()
-    }else{
+    if (userSelected) {
+      getAlbums()
+    } else {
       setAlbums([])
     }
-  },[userSelected])
+  }, [userSelected])
   return (
     <div className="container">
       <h1>Gestione albums photos</h1>
@@ -79,17 +79,17 @@ const UserAlbums = () => {
           </select>
         </div>
         <div className="col-6">
-            <select  className="form-select"
-             value={albumSelected}
+          <select className="form-select"
+            value={albumSelected}
             onChange={(e) => setAlbumSelected(e.target.value)}>
-                <option value="0">Seleziona l'album</option>
-                {
-                  albums.map((a)=>{
-                    const {id,title}=a
-                    return <option key={id} value={id}>{title}</option>
-                  })
-                }
-            </select>
+            <option value="0">Seleziona l'album</option>
+            {
+              albums.map((a) => {
+                const { id, title } = a
+                return <option key={id} value={id}>{title}</option>
+              })
+            }
+          </select>
         </div>
       </div>
       <div className="row">

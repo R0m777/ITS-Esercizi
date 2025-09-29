@@ -18,7 +18,7 @@ create table utente (
 create table privato (
 	utente stringa primary key,
 	foreign key (utente)
-		references utente(username)
+		references utente(username) deferrable
 );
 
 create table venditoreprof (
@@ -26,7 +26,7 @@ create table venditoreprof (
 	vetrina URL not null,
 	unique (vetrina),
 	foreign key (utente)
-		references utente(username)
+		references utente(username) deferrable
 );
 
 -- Vincoli {disjoint, complete} su Utente non ancora implementati
@@ -80,7 +80,7 @@ create table met_post(
 create table postoggettousato(
 	postoggetto integer primary key,
 	foreign key (postoggetto)
-		references postoggetto(id),
+		references postoggetto(id) deferrable,
 	condizione condizione not null,
 	anni_garanzia intgez not null
 );
@@ -88,14 +88,14 @@ create table postoggettousato(
 create table postoggettonuovo(
 	postoggetto integer primary key,
 	foreign key (postoggetto)
-		references postoggetto(id),
+		references postoggetto(id) deferrable,
 	anni_garanzia intge2 not null,
 	pubblica_nuovo stringa not null,
 	foreign key (pubblica_nuovo)
-		references venditoreprof(utente),
+		references venditoreprof(utente) deferrable,
 
 	foreign key (postoggetto, pubblica_nuovo)
-		references postoggetto(id, pubblica)
+		references postoggetto(id, pubblica) deferrable
 );
 
 -- Vincoli {disjoint, complete} su PostOggetto nuovo/usato non ancora implementati
@@ -103,7 +103,7 @@ create table postoggettonuovo(
 create table postoggettocompralosubito(
 	postoggetto integer primary key,
 	foreign key (postoggetto)
-		references postoggetto(id),
+		references postoggetto(id) deferrable,
 	prezzo realgz not null,
 	acquirente stringa,
 	foreign key (acquirente)
@@ -117,7 +117,7 @@ create table postoggettocompralosubito(
 create table postoggettoasta(
 	postoggetto integer primary key,
 	foreign key (postoggetto)
-		references postoggetto(id),
+		references postoggetto(id) deferrable,
 	prezzo_base realgez not null,
 	prezzo_bid realgz not null,
 	scadenza timestamp not null

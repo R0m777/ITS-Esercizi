@@ -26,6 +26,8 @@ create domain Denaro as real
     default 0
 check(value>=0);
 
+
+
 --Schema relazionale con vincoli della base dati
 
 create table Persona (

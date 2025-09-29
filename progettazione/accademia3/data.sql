@@ -92,4 +92,9 @@ INSERT INTO Assenza(id, persona, tipo, giorno) VALUES
 ('10',  '0',	'Malattia', 			'2012-04-18');
 
 
+insert into attivitaprogetto(id, persona, progetto, wp, giorno, tipo, oredurata)
+values
+(11, 10, 2, 1, '2012-04-22', 'Altro', 6),
+(12, 10, 2, 1, '2012-04-23', 'Altro', 6);
+
 commit;

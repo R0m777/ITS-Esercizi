@@ -1,0 +1,70 @@
+Raffinamento dei requ
+
+1. responsabili
+    1..1 esposizioni delle opere (temporanie o permanenti)
+    1..2 esposizione è un insieme di opere organizzate per il periodo ti tempo
+
+2. Utenti:
+    2..1 gestione opere arte vd req 3
+    2..2 organizzazione delle esposizioni
+
+3. opere:
+    3..1 nome
+    3..2 categoria
+    3..3 autore vd req 4
+    3..4 anno di realizzazione
+    3..5 tecnica (se è rilevante)
+    3..6 correnti artistiche
+
+4. autore:
+    4..1 nome d'arte
+    4..2 luogo di nascita
+    4..3 data di morte (se è morto)
+    4..4 opere d'arte del museo
+
+5. esposizioni:
+    5..1 permanenti 
+    5..2 temporanie 
+        5.2.1 nome
+        5.2.2 intervallo data
+        5.2.3 prezzo di accesso
+
+6. biglietti:
+    6.1 tariffa vd req 7
+    6.2 data validità 
+    6.3 scelta dal visitatore
+    6.4 tipi
+        6.4.1 standard pari al prezzo base della tariffa
+        6.4.2 extended access 
+            6.4.2.1 acesso esposizioni permanenti vd req 5.1
+            6.4.2.2 prezzo 
+
+7. tariffa:
+    7.1 nome
+    7.2 prezzo base (Reale > 0)
+
+
+l sistema deve offrire le seguenti funzionalit`a ai responsabili del patrimonio artistico e al
+management:
+• inserimento e rimozione di opere d’arte;
+
+• creazione di un’esposizione, con le opere relative;
+
+• aggiunta di un artista e modifica delle sue informazioni;
+
+• modifica delle informazioni di un’esposizione;
+
+• registrazione della vendita di uno o pi`u biglietti di una certa tipologia e validi per una
+certa data.
+
+• calcolo degli introiti totali per una certa esposizione temporanea, in un dato periodo.
+(Solo e unicamente per le funzionalit`a di seguito, dare la specifica completa.)
+
+• Data un’esposizione temporanea e una data, calcolare il numero di biglietti Extended
+access venduti per tale esposizione e validi per tale data.
+
+• Dato un periodo di tempo, calcolare le esposizioni temporanee per la quale `e stato
+venduto il pi`u alto numero di biglietti Extended access nel periodo.
+
+• Dato un artista e un periodo di tempo, calcolare le opere realizzate dall’artista che non
+sono mai state esposte nel periodo dato.
